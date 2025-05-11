@@ -1,13 +1,9 @@
-# 1. Configurações do TOUCHPAD (desative clique por toque e ative scroll com dois dedos):
-gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
-gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
-gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
-
-# 2. Configurações do MOUSE (desative rolagem natural):
-gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
-
-# 3. Ative o "arrastar com toque" (drag-and-drop com 1 dedo):
-gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag-enabled true
-
-# 4. Aplique as configurações imediatamente (reinicie o serviço do GNOME):
-systemctl --user restart gsd-xsettings
+Failed to restart gsd-xsettings.service: Unit gsd-xsettings.service not found.
+aura@debian:~$ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
+aura@debian:~$ gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
+aura@debian:~$ gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
+aura@debian:~$ gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
+aura@debian:~$ gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag-enabled true
+Nenhuma chave “tap-and-drag-enabled”
+aura@debian:~$ systemctl --user restart gsd-xsettings
+Failed to restart gsd-xsettings.service: Unit gsd-xsettings.service not found.

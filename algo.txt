@@ -1,9 +1,3 @@
-Failed to restart gsd-xsettings.service: Unit gsd-xsettings.service not found.
-aura@debian:~$ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
-aura@debian:~$ gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
-aura@debian:~$ gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
-aura@debian:~$ gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
-aura@debian:~$ gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag-enabled true
-Nenhuma chave “tap-and-drag-enabled”
-aura@debian:~$ systemctl --user restart gsd-xsettings
-Failed to restart gsd-xsettings.service: Unit gsd-xsettings.service not found.
+gsettings get org.gnome.desktop.peripherals.touchpad tap-to-click  # deve retornar "false"
+gsettings get org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled  # deve retornar "true"
+gsettings get org.gnome.desktop.peripherals.mouse natural-scroll  # deve retornar "false"

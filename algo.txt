@@ -1,10 +1,13 @@
-WARNING: running xinput against an Xwayland server. See the xinput man page for details.
-⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
-⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
-⎜   ↳ xwayland-pointer:14                     	id=6	[slave  pointer  (2)]
-⎜   ↳ xwayland-relative-pointer:14            	id=7	[slave  pointer  (2)]
-⎜   ↳ xwayland-pointer-gestures:14            	id=8	[slave  pointer  (2)]
-⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
-    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
-    ↳ xwayland-keyboard:14                    	id=9	[slave  keyboard (3)]
-/etc/libinput.conf.d/00-mouse.conf
+# 1. Configurações do TOUCHPAD (desative clique por toque e ative scroll com dois dedos):
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
+gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
+gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
+
+# 2. Configurações do MOUSE (desative rolagem natural):
+gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
+
+# 3. Ative o "arrastar com toque" (drag-and-drop com 1 dedo):
+gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag-enabled true
+
+# 4. Aplique as configurações imediatamente (reinicie o serviço do GNOME):
+systemctl --user restart gsd-xsettings

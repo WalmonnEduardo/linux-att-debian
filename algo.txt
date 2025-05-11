@@ -1,13 +1,1 @@
-gsettings get org.gnome.desktop.peripherals.touchpad tap-to-click  # deve retornar "false"
-gsettings get org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled  # deve retornar "true"
-gsettings get org.gnome.desktop.peripherals.mouse natural-scroll  # deve retornar "false"
-# Touchpad:
-gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
-gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
-gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
 
-# Mouse:
-gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
-
-# Arrastar com toque via libinput:
-xinput set-prop [ID_DO_TOUCHPAD] "libinput Tapping Drag Enabled" 1 && systemctl --user restart gsd-xsettings
